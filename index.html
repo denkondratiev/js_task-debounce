@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Debounce</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./styles/main.scss">
+  </head>
+  <body class="hero is-primary is-bold is-fullheight">
+    <main class="section is-medium">
+      <div class="container has-text-centered">
+        <h1 class="title">DEBOUNCE INPUT</h1>
+        <h2 class="subtitle">I am waiting for your wish master🐱‍🏍</h2>
+        <form
+          autocomplete="off"
+          id="form"
+          class="form"
+          style="margin-bottom: 50px"
+        >
+          <label for="input" class="label">
+            <input
+              type="text"
+              class="input is-large is-rounded has-text-centered"
+              id="input"
+              placeholder="WRITE HERE..."
+            >
+          </label>
+        </form>
+        <div
+          class="box is-centered"
+          style="border-radius: 50px; padding: 0; height: 62px;"
+        >
+         <p id="output" style="line-height: 62px; color: #363636; font-size: 1.5rem;"></p>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
 </html>
