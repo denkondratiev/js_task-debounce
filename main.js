@@ -3,9 +3,9 @@
 function debounce(f, delay) {
   let timeout;
 
-  return (...args) => {
+  return function() {
     clearTimeout(timeout);
-    timeout = setTimeout(() => f(...args), delay);
+    timeout = setTimeout(() => f.apply(this, arguments), delay);
   };
 }
 
@@ -14,7 +14,7 @@ const output = document.getElementById('output');
 
 function onChange(event) {
   output.textContent = event.target.value;
-  // console.log(this.value);
+  console.log(this.value);
 }
 
 const wrapper = debounce(onChange, 1000);
